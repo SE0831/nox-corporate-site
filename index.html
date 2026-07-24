@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOX合同会社は、業務設計・AI実装・運用改善を通じて企業の変革を支援するAIビジネスデザイン企業です。">
+  <title>NOX合同会社｜AI Business Design Partner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --color-primary: #0F2A4A;
+      --color-primary-light: #1E4976;
+      --color-primary-30: rgba(15, 42, 74, 0.30);
+      --color-primary-78: rgba(15, 42, 74, 0.78);
+      --color-primary-96: rgba(15, 42, 74, 0.96);
+      --color-primary-04: rgba(15, 42, 74, 0.04);
+      --color-accent: #2563EB;
+      --color-accent-light: #3B73E8;
+      --color-text: #1A2332;
+      --color-text-muted: #5B6B7F;
+      --color-bg: #FAFBFC;
+      --color-bg-alt: #F3F5F8;
+      --color-border: #E3E8EF;
+      --color-white: #FFFFFF;
+      --color-footer: #0A1E36;
+      --color-calm-alert: #E8927C;
+      --color-transparent: transparent;
+      --color-white-04: rgba(255, 255, 255, 0.04);
+      --color-white-08: rgba(255, 255, 255, 0.08);
+      --color-white-10: rgba(255, 255, 255, 0.10);
+      --color-white-20: rgba(255, 255, 255, 0.20);
+      --color-white-50: rgba(255, 255, 255, 0.50);
+      --color-white-55: rgba(255, 255, 255, 0.55);
+      --color-white-65: rgba(255, 255, 255, 0.65);
+      --color-white-68: rgba(255, 255, 255, 0.68);
+      --color-white-70: rgba(255, 255, 255, 0.70);
+      --color-white-75: rgba(255, 255, 255, 0.75);
+      --color-white-76: rgba(255, 255, 255, 0.76);
+      --color-white-95: rgba(255, 255, 255, 0.95);
+      --shadow-sm: 0 1px 2px rgba(15, 42, 74, 0.06);
+      --shadow-md: 0 4px 16px rgba(15, 42, 74, 0.08);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: "Noto Sans JP", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .font-serif-jp {
+      font-family: "Noto Serif JP", serif;
+    }
+
+    .hero-media {
+      background-color: var(--color-primary);
+    }
+
+    .hero-video {
+      height: 100%;
+      inset: 0;
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      width: 100%;
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(
+          90deg,
+          var(--color-primary-96) 0%,
+          var(--color-primary-78) 52%,
+          var(--color-primary-30) 100%
+        );
+      inset: 0;
+      position: absolute;
+    }
+
+    .hero-primary-button {
+      background-color: var(--color-accent);
+      box-shadow: var(--shadow-sm);
+      color: var(--color-white);
+      transition:
+        background-color 0.3s var(--ease-out),
+        box-shadow 0.3s var(--ease-out),
+        transform 0.3s var(--ease-out);
+    }
+
+    .hero-primary-button:hover,
+    .hero-primary-button:focus-visible {
+      background-color: var(--color-accent-light);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .hero-secondary-button {
+      background-color: var(--color-white-08);
+      border-color: var(--color-white-20);
+      color: var(--color-white);
+      transition:
+        background-color 0.3s var(--ease-out),
+        border-color 0.3s var(--ease-out),
+        transform 0.3s var(--ease-out);
+    }
+
+    .hero-secondary-button:hover,
+    .hero-secondary-button:focus-visible {
+      background-color: var(--color-white-10);
+      border-color: var(--color-white);
+      transform: translateY(-2px);
+    }
+
+    .nav-link {
+      color: var(--color-text-muted);
+      transition: color 0.3s var(--ease-out);
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible {
+      color: var(--color-primary);
+    }
+
+    .primary-button {
+      background-color: var(--color-primary);
+      box-shadow: var(--shadow-sm);
+      color: var(--color-white);
+      transition:
+        background-color 0.3s var(--ease-out),
+        box-shadow 0.3s var(--ease-out),
+        transform 0.3s var(--ease-out);
+    }
+
+    .primary-button:hover,
+    .primary-button:focus-visible {
+      background-color: var(--color-primary-light);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .secondary-button {
+      background-color: var(--color-white);
+      border-color: var(--color-border);
+      color: var(--color-primary);
+      transition:
+        border-color 0.3s var(--ease-out),
+        box-shadow 0.3s var(--ease-out),
+        transform 0.3s var(--ease-out);
+    }
+
+    .secondary-button:hover,
+    .secondary-button:focus-visible {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-2px);
+    }
+
+    .button-arrow {
+      display: inline-block;
+      transition: transform 0.3s var(--ease-out);
+    }
+
+    a:hover .button-arrow,
+    a:focus-visible .button-arrow {
+      transform: translateX(4px);
+    }
+
+    .content-card {
+      background-color: var(--color-white);
+      border-color: var(--color-border);
+      box-shadow: var(--shadow-sm);
+      transition:
+        border-color 0.3s var(--ease-out),
+        box-shadow 0.3s var(--ease-out),
+        transform 0.3s var(--ease-out);
+    }
+
+    .content-card:hover {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .problem-card {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .problem-card::before {
+      background-color: var(--color-accent);
+      content: "";
+      height: 3px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: width 0.3s var(--ease-out);
+      width: 48px;
+    }
+
+    .problem-card:hover::before {
+      width: 100%;
+    }
+
+    .soft-card {
+      background-color: var(--color-white);
+      border-color: var(--color-border);
+      box-shadow: var(--shadow-sm);
+      transition:
+        box-shadow 0.3s var(--ease-out),
+        transform 0.3s var(--ease-out);
+    }
+
+    .soft-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .reason-item .reason-number {
+      color: var(--color-border);
+      transition: color 0.3s var(--ease-out);
+    }
+
+    .reason-item:hover .reason-number {
+      color: var(--color-accent);
+    }
+
+    .section-stage {
+      isolation: isolate;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .section-marker {
+      color: var(--color-primary-04);
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(7rem, 15vw, 13rem);
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      line-height: 1;
+      pointer-events: none;
+      position: absolute;
+      right: -0.04em;
+      top: 0.18em;
+      user-select: none;
+      z-index: -1;
+    }
+
+    .section-marker-light {
+      color: var(--color-white-04);
+      z-index: 0;
+    }
+
+    .section-rule {
+      background-color: var(--color-accent);
+      height: 2px;
+      width: 40px;
+    }
+
+    .strength-index {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+    }
+
+    .reason-item {
+      transition:
+        background-color 0.3s var(--ease-out),
+        padding-left 0.3s var(--ease-out),
+        padding-right 0.3s var(--ease-out);
+    }
+
+    .reason-item:hover {
+      background-color: var(--color-white);
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    .column-card-visual {
+      background-color: var(--color-primary);
+      min-height: 148px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .column-card-visual::before,
+    .column-card-visual::after {
+      border: 1px solid var(--color-white-20);
+      content: "";
+      height: 112px;
+      position: absolute;
+      transform: rotate(45deg);
+      width: 112px;
+    }
+
+    .column-card-visual::before {
+      right: -28px;
+      top: -54px;
+    }
+
+    .column-card-visual::after {
+      bottom: -70px;
+      left: 34%;
+    }
+
+    .column-card-visual .visual-line {
+      background-color: var(--color-white-20);
+      height: 1px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 42%;
+    }
+
+    .contact-stage {
+      background-color: var(--color-primary);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contact-stage::after {
+      border: 1px solid var(--color-white-10);
+      content: "";
+      height: 240px;
+      position: absolute;
+      right: -90px;
+      top: -110px;
+      transform: rotate(32deg);
+      width: 240px;
+    }
+
+    .footer-link {
+      color: var(--color-white-68);
+      transition: color 0.3s var(--ease-out);
+    }
+
+    .footer-link:hover,
+    .footer-link:focus-visible {
+      color: var(--color-white);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity 0.7s var(--ease-out),
+        transform 0.7s var(--ease-out);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #mobile-menu {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(-8px);
+      transition:
+        max-height 0.3s var(--ease-out),
+        opacity 0.3s var(--ease-out),
+        transform 0.3s var(--ease-out);
+    }
+
+    #mobile-menu.is-open {
+      max-height: 440px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .menu-line {
+      transform-origin: center;
+      transition:
+        opacity 0.3s var(--ease-out),
+        transform 0.3s var(--ease-out);
+    }
+
+    #mobile-menu-btn[aria-expanded="true"] .menu-line:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    #mobile-menu-btn[aria-expanded="true"] .menu-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    #mobile-menu-btn[aria-expanded="true"] .menu-line:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--color-accent);
+      outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero-overlay {
+        background:
+          linear-gradient(
+            90deg,
+            var(--color-primary-96) 0%,
+            var(--color-primary-78) 100%
+          );
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="sticky top-0 z-50 border-b border-[--color-border] bg-[--color-white-95] backdrop-blur-sm">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:h-[72px] md:px-8">
+      <a href="#top" class="flex items-center gap-3" aria-label="NOX合同会社 ホーム">
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-[--color-primary] text-sm font-bold tracking-wider text-[--color-white]">NX</span>
+        <span class="text-lg font-bold tracking-[0.08em] text-[--color-primary]">NOX</span>
+      </a>
+
+      <nav class="hidden items-center gap-8 text-sm font-medium md:flex" aria-label="メインナビゲーション">
+        <a class="nav-link" href="services.html">サービス</a>
+        <a class="nav-link" href="insights.html#cases">導入事例</a>
+        <a class="nav-link" href="company.html">会社情報</a>
+        <a class="nav-link" href="insights.html">コラム</a>
+        <a class="primary-button inline-flex min-h-11 items-center gap-2 rounded-lg px-5 font-semibold" href="contact.html">
+          お問い合わせ
+          <span class="button-arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
+
+      <button
+        id="mobile-menu-btn"
+        class="grid h-11 w-11 place-items-center rounded-lg border border-[--color-border] bg-[--color-white] md:hidden"
+        type="button"
+        aria-label="メニューを開く"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <span class="flex flex-col gap-1">
+          <span class="menu-line block h-0.5 w-5 bg-[--color-primary]"></span>
+          <span class="menu-line block h-0.5 w-5 bg-[--color-primary]"></span>
+          <span class="menu-line block h-0.5 w-5 bg-[--color-primary]"></span>
+        </span>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="border-t border-[--color-border] bg-[--color-white] md:hidden" aria-hidden="true" inert>
+      <nav class="mx-auto flex max-w-7xl flex-col px-5 py-5 text-sm font-medium" aria-label="モバイルナビゲーション">
+        <a class="mobile-menu-link nav-link border-b border-[--color-border] py-3" href="services.html">サービス</a>
+        <a class="mobile-menu-link nav-link border-b border-[--color-border] py-3" href="insights.html#cases">導入事例</a>
+        <a class="mobile-menu-link nav-link border-b border-[--color-border] py-3" href="company.html">会社情報</a>
+        <a class="mobile-menu-link nav-link py-3" href="insights.html">コラム</a>
+        <a class="mobile-menu-link primary-button mt-3 inline-flex min-h-[52px] items-center justify-center gap-2 rounded-lg px-5 font-semibold" href="contact.html">
+          お問い合わせ
+          <span class="button-arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero-media relative isolate min-h-[680px] overflow-hidden md:min-h-[720px]">
+      <video
+        id="hero-video"
+        class="hero-video -z-20"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=82"
+        aria-hidden="true"
+        tabindex="-1"
+        disablepictureinpicture
+      >
+        <!-- Free-to-use footage: Pexels / cottonbro studio, video ID 3202364 -->
+        <source src="https://videos.pexels.com/video-files/3202364/3202364-hd_1280_720_25fps.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay -z-10" aria-hidden="true"></div>
+
+      <div class="mx-auto grid min-h-[680px] max-w-7xl items-center gap-14 px-5 py-16 md:min-h-[720px] md:px-8 md:py-24 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+        <div class="reveal max-w-3xl">
+          <div class="mb-7 inline-flex items-center gap-2 rounded-full border border-[--color-white-20] bg-[--color-white-08] px-4 py-2 text-xs font-semibold tracking-wide text-[--color-white] shadow-[var(--shadow-sm)] backdrop-blur-sm">
+            <span class="h-1.5 w-1.5 rounded-full bg-[--color-white]" aria-hidden="true"></span>
+            AI業務設計のプロフェッショナル
+          </div>
+
+          <h1 class="font-serif-jp text-[1.9rem] font-bold leading-[1.25] tracking-[0.02em] text-[--color-white] md:text-5xl lg:text-6xl">
+            <span class="inline-block">複雑な業務課題を、</span><br>
+            <span class="inline-block"><span class="border-b-2 border-[--color-white] text-[--color-white]">AI</span>で解決。</span>
+          </h1>
+
+          <p class="mt-7 max-w-2xl text-base leading-relaxed text-[--color-white-76] md:text-lg">
+            現場の業務フローを深く理解し、最適なAI活用を設計。導入して終わりではなく、成果が定着するまで伴走します。
+          </p>
+
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a class="hero-primary-button inline-flex min-h-[52px] w-full items-center justify-center gap-3 rounded-lg px-7 py-3.5 text-sm font-semibold sm:w-auto" href="contact.html">
+              お問い合わせ
+              <span class="button-arrow text-base" aria-hidden="true">→</span>
+            </a>
+            <a class="hero-secondary-button inline-flex min-h-[52px] w-full items-center justify-center gap-3 rounded-lg border px-7 py-3.5 text-sm font-semibold backdrop-blur-sm sm:w-auto" href="services.html">
+              サービスを見る
+              <span class="button-arrow text-base" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <p class="mt-5 flex items-center gap-2 text-xs text-[--color-white-70]">
+            <span class="text-[--color-white]" aria-hidden="true">✓</span>
+            初回相談無料・オンライン対応
+          </p>
+        </div>
+
+        <div class="reveal hidden justify-end self-end pb-4 lg:flex">
+          <div class="flex max-w-sm items-start gap-3 rounded-xl border border-[--color-white-20] bg-[--color-white-10] px-5 py-4 text-[--color-white] shadow-[var(--shadow-md)] backdrop-blur-md">
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-[--color-white] text-sm font-bold text-[--color-primary]" aria-hidden="true">✓</span>
+            <div>
+              <p class="text-sm font-semibold">業務分析から運用改善まで一貫支援</p>
+              <p class="mt-1 text-xs leading-relaxed text-[--color-white-70]">成果につながる仕組みを、現場の皆さまと共につくります。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-[--color-border] bg-[--color-white]" aria-label="支援領域">
+      <div class="mx-auto grid max-w-6xl grid-cols-2 px-5 py-6 md:grid-cols-4 md:px-8">
+        <div class="flex items-center justify-center gap-2 border-b border-r border-[--color-border] py-3 text-xs font-semibold text-[--color-primary] md:border-b-0">
+          <span class="text-[--color-accent]" aria-hidden="true">◇</span>
+          業務フロー分析
+        </div>
+        <div class="flex items-center justify-center gap-2 border-b border-[--color-border] py-3 text-xs font-semibold text-[--color-primary] md:border-b-0 md:border-r">
+          <span class="text-[--color-accent]" aria-hidden="true">⌘</span>
+          AI実装
+        </div>
+        <div class="flex items-center justify-center gap-2 border-r border-[--color-border] py-3 text-xs font-semibold text-[--color-primary]">
+          <span class="text-[--color-accent]" aria-hidden="true">◎</span>
+          運用監視
+        </div>
+        <div class="flex items-center justify-center gap-2 py-3 text-xs font-semibold text-[--color-primary]">
+          <span class="text-[--color-accent]" aria-hidden="true">↗</span>
+          継続改善
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="section-stage bg-[--color-bg] py-16 md:py-24">
+      <span class="section-marker" aria-hidden="true">01</span>
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="reveal grid items-end gap-7 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
+          <div>
+            <div class="section-rule mb-5" aria-hidden="true"></div>
+            <p class="mb-4 text-xs font-semibold tracking-[0.25em] text-[--color-accent]">SERVICE</p>
+            <h2 class="font-serif-jp text-3xl font-bold leading-tight text-[--color-primary] md:text-4xl">
+              <span class="inline-block">事業課題から、</span><span class="inline-block">実装と定着まで。</span>
+            </h2>
+          </div>
+          <p class="max-w-2xl border-l-2 border-[--color-border] pl-5 text-base leading-relaxed text-[--color-text-muted] md:text-lg">
+            構想だけで終わらせず、現場で使われ、成果が積み重なるところまで。企業ごとの状況に合わせて支援します。
+          </p>
+        </div>
+
+        <div class="stagger-group mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <article class="content-card problem-card reveal flex min-h-full flex-col rounded-2xl border p-6 md:p-7">
+            <span class="text-sm tracking-widest text-[--color-text-muted]">01</span>
+            <span class="mt-6 grid h-12 w-12 place-items-center rounded-lg bg-[--color-bg-alt] text-xl text-[--color-primary]" aria-hidden="true">⌛</span>
+            <h3 class="mt-5 text-lg font-bold text-[--color-primary]">AI業務設計</h3>
+            <p class="mt-3 flex-1 text-sm leading-7 text-[--color-text-muted]">現状業務を可視化し、AIを活用する領域と成果指標を整理します。</p>
+            <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[--color-accent]" href="services.html#design">
+              詳しく見る
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="content-card problem-card reveal flex min-h-full flex-col rounded-2xl border p-6 md:p-7">
+            <span class="text-sm tracking-widest text-[--color-text-muted]">02</span>
+            <span class="mt-6 grid h-12 w-12 place-items-center rounded-lg bg-[--color-bg-alt] text-xl text-[--color-primary]" aria-hidden="true">△</span>
+            <h3 class="mt-5 text-lg font-bold text-[--color-primary]">生成AI導入支援</h3>
+            <p class="mt-3 flex-1 text-sm leading-7 text-[--color-text-muted]">目的に合うツール選定から検証、社内展開までを伴走します。</p>
+            <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[--color-accent]" href="services.html#implementation">
+              詳しく見る
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="content-card problem-card reveal flex min-h-full flex-col rounded-2xl border p-6 md:p-7">
+            <span class="text-sm tracking-widest text-[--color-text-muted]">03</span>
+            <span class="mt-6 grid h-12 w-12 place-items-center rounded-lg bg-[--color-bg-alt] text-xl text-[--color-primary]" aria-hidden="true">∞</span>
+            <h3 class="mt-5 text-lg font-bold text-[--color-primary]">業務自動化</h3>
+            <p class="mt-3 flex-1 text-sm leading-7 text-[--color-text-muted]">定型作業や情報連携を自動化し、組織の生産性を高めます。</p>
+            <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[--color-accent]" href="services.html#automation">
+              詳しく見る
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="content-card problem-card reveal flex min-h-full flex-col rounded-2xl border p-6 md:p-7">
+            <span class="text-sm tracking-widest text-[--color-text-muted]">04</span>
+            <span class="mt-6 grid h-12 w-12 place-items-center rounded-lg bg-[--color-bg-alt] text-xl text-[--color-primary]" aria-hidden="true">↻</span>
+            <h3 class="mt-5 text-lg font-bold text-[--color-primary]">運用・継続改善</h3>
+            <p class="mt-3 flex-1 text-sm leading-7 text-[--color-text-muted]">利用状況を分析し、業務とAIの仕組みを継続的に改善します。</p>
+            <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[--color-accent]" href="services.html#operation">
+              詳しく見る
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+
+        <div class="reveal mt-12 flex flex-col items-center justify-between gap-5 rounded-2xl bg-[--color-primary] px-6 py-6 text-center md:flex-row md:px-8 md:text-left">
+          <div>
+            <p class="text-xs font-semibold tracking-[0.18em] text-[--color-white-70]">NOT SURE WHERE TO START?</p>
+            <p class="mt-2 text-sm font-semibold leading-relaxed text-[--color-white]">自社に必要な支援が分からない段階でも構いません。</p>
+          </div>
+          <a class="hero-primary-button inline-flex min-h-[52px] w-full shrink-0 items-center justify-center gap-3 rounded-lg px-7 py-3.5 text-sm font-semibold sm:w-auto" href="contact.html">
+            相談する
+            <span class="button-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="strength" class="section-stage bg-[--color-bg-alt] py-16 md:py-24">
+      <span class="section-marker" aria-hidden="true">02</span>
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+        <div class="reveal self-start lg:sticky lg:top-28">
+          <div class="section-rule mb-5" aria-hidden="true"></div>
+          <p class="mb-4 text-xs font-semibold tracking-[0.25em] text-[--color-accent]">STRENGTH</p>
+          <h2 class="font-serif-jp text-3xl font-bold leading-tight text-[--color-primary] md:text-4xl">
+            <span class="inline-block">NOXが選ばれる、</span><span class="inline-block">5つの理由</span>
+          </h2>
+          <p class="mt-5 max-w-md text-base leading-relaxed text-[--color-text-muted] md:text-lg">
+            技術ありきではなく、事業の成果から逆算。構想を現場で使える仕組みに変えます。
+          </p>
+          <div class="strength-index mt-8 hidden max-w-xs rounded-2xl p-6 lg:block">
+            <p class="font-serif-jp text-5xl font-bold leading-none">05</p>
+            <p class="mt-4 text-xs font-semibold tracking-[0.22em] text-[--color-white-70]">REASONS TO CHOOSE NOX</p>
+          </div>
+        </div>
+
+        <div class="stagger-group border-t border-[--color-border]">
+          <article class="reason-item reveal grid grid-cols-[64px_1fr] gap-5 border-b border-[--color-border] py-8 md:grid-cols-[104px_1fr] md:gap-8 md:py-10">
+            <span class="reason-number font-serif-jp text-5xl font-bold leading-none">01</span>
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-lg text-[--color-primary]" aria-hidden="true">◇</span>
+                <h3 class="text-xl font-bold text-[--color-primary]">業務理解から始める設計力</h3>
+              </div>
+              <p class="mt-3 text-sm leading-7 text-[--color-text-muted] md:text-base">ヒアリングと業務フローの可視化を通じ、ボトルネックと改善余地を特定。AIを使うべき場所、使わない場所を明確にします。</p>
+            </div>
+          </article>
+
+          <article class="reason-item reveal grid grid-cols-[64px_1fr] gap-5 border-b border-[--color-border] py-8 md:grid-cols-[104px_1fr] md:gap-8 md:py-10">
+            <span class="reason-number font-serif-jp text-5xl font-bold leading-none">02</span>
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-lg text-[--color-primary]" aria-hidden="true">⌘</span>
+                <h3 class="text-xl font-bold text-[--color-primary]">最適な技術を選ぶ中立性</h3>
+              </div>
+              <p class="mt-3 text-sm leading-7 text-[--color-text-muted] md:text-base">特定の製品に縛られず、既存環境・費用対効果・運用体制を踏まえて、最小限で効果の高い構成を提案します。</p>
+            </div>
+          </article>
+
+          <article class="reason-item reveal grid grid-cols-[64px_1fr] gap-5 border-b border-[--color-border] py-8 md:grid-cols-[104px_1fr] md:gap-8 md:py-10">
+            <span class="reason-number font-serif-jp text-5xl font-bold leading-none">03</span>
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-lg text-[--color-primary]" aria-hidden="true">◎</span>
+                <h3 class="text-xl font-bold text-[--color-primary]">小さく試し、確実に広げる</h3>
+              </div>
+              <p class="mt-3 text-sm leading-7 text-[--color-text-muted] md:text-base">短期間の検証から始め、数値と現場の声を確認しながら段階的に展開。大きな初期投資や手戻りのリスクを抑えます。</p>
+            </div>
+          </article>
+
+          <article class="reason-item reveal grid grid-cols-[64px_1fr] gap-5 border-b border-[--color-border] py-8 md:grid-cols-[104px_1fr] md:gap-8 md:py-10">
+            <span class="reason-number font-serif-jp text-5xl font-bold leading-none">04</span>
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-lg text-[--color-primary]" aria-hidden="true">↔</span>
+                <h3 class="text-xl font-bold text-[--color-primary]">現場を置き去りにしない伴走</h3>
+              </div>
+              <p class="mt-3 text-sm leading-7 text-[--color-text-muted] md:text-base">マニュアル整備や利用者向けトレーニングまで支援。担当者だけでなく、実際に使うメンバーが納得できる運用をつくります。</p>
+            </div>
+          </article>
+
+          <article class="reason-item reveal grid grid-cols-[64px_1fr] gap-5 border-b border-[--color-border] py-8 md:grid-cols-[104px_1fr] md:gap-8 md:py-10">
+            <span class="reason-number font-serif-jp text-5xl font-bold leading-none">05</span>
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-lg text-[--color-primary]" aria-hidden="true">↗</span>
+                <h3 class="text-xl font-bold text-[--color-primary]">導入後も成果を改善し続ける</h3>
+              </div>
+              <p class="mt-3 text-sm leading-7 text-[--color-text-muted] md:text-base">利用状況や成果指標を継続的に確認し、プロンプトや業務フローを更新。事業の変化に適応する仕組みを育てます。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[--color-white] py-16 md:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 md:px-8 lg:grid-cols-[1fr_0.9fr] lg:gap-20">
+        <div class="reveal">
+          <div class="section-rule mb-5" aria-hidden="true"></div>
+          <p class="mb-4 text-xs font-semibold tracking-[0.25em] text-[--color-accent]">ABOUT NOX</p>
+          <h2 class="font-serif-jp text-3xl font-bold leading-tight text-[--color-primary] md:text-4xl">
+            <span class="inline-block">業務とテクノロジーの間に、</span><span class="inline-block">実行できる設計を。</span>
+          </h2>
+          <p class="mt-6 max-w-2xl text-base leading-relaxed text-[--color-text-muted] md:text-lg">
+            NOXは、企業の業務を理解し、AIを事業成果へつなげるビジネスデザインパートナーです。戦略、実装、運用を分断せず、一つのチームとして伴走します。
+          </p>
+          <a class="secondary-button mt-8 inline-flex min-h-[52px] items-center justify-center gap-3 rounded-lg border px-7 py-3.5 text-sm font-semibold" href="company.html">
+            NOXについて
+            <span class="button-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="reveal grid grid-cols-2 overflow-hidden rounded-2xl bg-[--color-primary] text-[--color-white] shadow-[var(--shadow-md)]">
+          <div class="border-b border-r border-[--color-white-10] p-6 md:p-8">
+            <p class="font-serif-jp text-4xl font-bold">01</p>
+            <p class="mt-3 text-xs leading-relaxed text-[--color-white-70]">業務理解を起点にする</p>
+          </div>
+          <div class="border-b border-[--color-white-10] p-6 md:p-8">
+            <p class="font-serif-jp text-4xl font-bold">02</p>
+            <p class="mt-3 text-xs leading-relaxed text-[--color-white-70]">技術を中立に選定する</p>
+          </div>
+          <div class="border-r border-[--color-white-10] p-6 md:p-8">
+            <p class="font-serif-jp text-4xl font-bold">03</p>
+            <p class="mt-3 text-xs leading-relaxed text-[--color-white-70]">小さく検証して広げる</p>
+          </div>
+          <div class="p-6 md:p-8">
+            <p class="font-serif-jp text-4xl font-bold">04</p>
+            <p class="mt-3 text-xs leading-relaxed text-[--color-white-70]">成果を継続的に改善する</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="difference" class="section-stage bg-[--color-primary] py-16 text-[--color-white] md:py-24">
+      <span class="section-marker section-marker-light" aria-hidden="true">03</span>
+      <div class="relative z-10 mx-auto max-w-6xl px-5 md:px-8">
+        <div class="reveal text-center">
+          <p class="mb-4 text-xs font-semibold tracking-[0.25em] text-[--color-white-70]">DIFFERENCE</p>
+          <h2 class="font-serif-jp text-3xl font-bold leading-tight text-[--color-white] md:text-4xl">
+            <span class="inline-block">「導入する」から、</span><span class="inline-block">「成果が続く」へ。</span>
+          </h2>
+          <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[--color-white-75] md:text-lg">
+            AIツールを入れることがゴールではありません。業務に根づき、改善が続く状態をつくることがNOXの仕事です。
+          </p>
+        </div>
+
+        <div class="stagger-group relative mt-12 grid gap-6 md:grid-cols-2 md:gap-14">
+          <article class="reveal rounded-2xl border border-[--color-white-10] bg-[--color-white-04] p-6 md:p-8">
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-lg bg-[--color-white-08] text-lg text-[--color-calm-alert]" aria-hidden="true">×</span>
+              <p class="text-xs font-semibold tracking-[0.18em] text-[--color-white-70]">COMMON FAILURE</p>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-[--color-white]">よくある失敗例</h3>
+            <ul class="mt-5 space-y-4 text-sm leading-7 text-[--color-white-70]">
+              <li class="flex gap-3"><span class="text-[--color-calm-alert]" aria-hidden="true">—</span><span>ツール導入が目的になり、現場の課題と噛み合わない</span></li>
+              <li class="flex gap-3"><span class="text-[--color-calm-alert]" aria-hidden="true">—</span><span>一部の担当者しか使えず、組織全体に広がらない</span></li>
+              <li class="flex gap-3"><span class="text-[--color-calm-alert]" aria-hidden="true">—</span><span>導入後の検証や改善がなく、効果を説明できない</span></li>
+            </ul>
+          </article>
+
+          <span class="absolute left-1/2 top-1/2 z-10 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-lg border border-[--color-white-20] bg-[--color-primary] text-xl text-[--color-white] md:grid" aria-hidden="true">→</span>
+
+          <article class="reveal rounded-2xl border border-[--color-white-20] border-l-[3px] border-l-[--color-accent] bg-[--color-white-08] p-6 md:p-8">
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-lg bg-[--color-white-08] text-lg text-[--color-white]" aria-hidden="true">✓</span>
+              <p class="text-xs font-semibold tracking-[0.18em] text-[--color-white-75]">NOX APPROACH</p>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-[--color-white]">NOXのアプローチ</h3>
+            <ul class="mt-5 space-y-4 text-sm leading-7 text-[--color-white-75]">
+              <li class="flex gap-3"><span class="text-[--color-white]" aria-hidden="true">✓</span><span>課題・業務・成果指標を整理してから技術を選ぶ</span></li>
+              <li class="flex gap-3"><span class="text-[--color-white]" aria-hidden="true">✓</span><span>小さな成功をつくり、教育と運用設計で現場へ広げる</span></li>
+              <li class="flex gap-3"><span class="text-[--color-white]" aria-hidden="true">✓</span><span>数値と利用状況を見ながら継続的に仕組みを改善する</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="section-stage bg-[--color-bg-alt] py-16 md:py-24">
+      <span class="section-marker" aria-hidden="true">04</span>
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="reveal flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <div class="section-rule mb-5" aria-hidden="true"></div>
+            <p class="mb-4 text-xs font-semibold tracking-[0.25em] text-[--color-accent]">CASE STUDY</p>
+            <h2 class="font-serif-jp text-3xl font-bold leading-tight text-[--color-primary] md:text-4xl">支援事例</h2>
+          </div>
+          <a class="inline-flex items-center gap-2 text-sm font-semibold text-[--color-accent]" href="insights.html#cases">
+            事例一覧を見る
+            <span class="button-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="stagger-group mt-10 grid gap-5 md:grid-cols-3">
+          <article class="content-card reveal rounded-2xl border p-6 md:p-7">
+            <p class="text-xs font-semibold tracking-[0.18em] text-[--color-accent]">BACK OFFICE</p>
+            <h3 class="mt-5 text-xl font-bold leading-relaxed text-[--color-primary]">月次レポート作成の自動化で、集計工数を大幅に削減</h3>
+            <p class="mt-4 text-sm leading-7 text-[--color-text-muted]">データ収集から要約までのフローを整理し、担当者が分析と意思決定に集中できる環境を構築。</p>
+            <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[--color-accent]" href="insights.html#case-01">事例を見る <span class="button-arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="content-card reveal rounded-2xl border p-6 md:p-7">
+            <p class="text-xs font-semibold tracking-[0.18em] text-[--color-accent]">SALES</p>
+            <h3 class="mt-5 text-xl font-bold leading-relaxed text-[--color-primary]">商談記録と提案準備を標準化し、営業品質を底上げ</h3>
+            <p class="mt-4 text-sm leading-7 text-[--color-text-muted]">生成AIを活用した記録・要約・提案支援により、属人化していた営業ノウハウを組織へ展開。</p>
+            <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[--color-accent]" href="insights.html#case-02">事例を見る <span class="button-arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="content-card reveal rounded-2xl border p-6 md:p-7">
+            <p class="text-xs font-semibold tracking-[0.18em] text-[--color-accent]">CUSTOMER SUPPORT</p>
+            <h3 class="mt-5 text-xl font-bold leading-relaxed text-[--color-primary]">問い合わせ分類を自動化し、初動対応を迅速化</h3>
+            <p class="mt-4 text-sm leading-7 text-[--color-text-muted]">分類基準と回答ナレッジを整備し、対応の優先順位付けと担当振り分けを効率化。</p>
+            <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[--color-accent]" href="insights.html#case-03">事例を見る <span class="button-arrow" aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="column" class="section-stage bg-[--color-white] py-16 md:py-24">
+      <span class="section-marker" aria-hidden="true">05</span>
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="reveal grid items-end gap-7 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
+          <div>
+            <div class="section-rule mb-5" aria-hidden="true"></div>
+            <p class="mb-4 text-xs font-semibold tracking-[0.25em] text-[--color-accent]">COLUMN</p>
+            <h2 class="font-serif-jp text-3xl font-bold leading-tight text-[--color-primary] md:text-4xl">
+              <span class="inline-block">AI活用のヒントを、</span><span class="inline-block">わかりやすく。</span>
+            </h2>
+          </div>
+          <p class="max-w-2xl border-l-2 border-[--color-border] pl-5 text-base leading-relaxed text-[--color-text-muted] md:text-lg">
+            導入前に知っておきたい考え方や、現場で活かすための実践知をお届けします。
+          </p>
+        </div>
+
+        <div class="stagger-group mt-12 grid gap-5 md:grid-cols-3">
+          <article class="content-card reveal flex flex-col overflow-hidden rounded-2xl border">
+            <div class="column-card-visual flex items-end p-6 text-[--color-white]">
+              <span class="visual-line" aria-hidden="true"></span>
+              <div class="relative z-10">
+                <p class="font-serif-jp text-4xl font-bold">01</p>
+                <p class="mt-2 text-[0.68rem] font-semibold tracking-[0.2em] text-[--color-white-70]">STRATEGY / DESIGN</p>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col p-6 md:p-7">
+              <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold tracking-wider text-[--color-accent]">AI STRATEGY</span>
+              <time class="text-xs text-[--color-text-muted]" datetime="2026-07-18">2026.07.18</time>
+            </div>
+              <h3 class="mt-4 text-lg font-bold leading-relaxed text-[--color-primary]">AI導入の前に整理したい、3つの業務視点</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[--color-text-muted]">効果の出る業務を見極めるための、工数・頻度・判断ルールの整理方法を解説します。</p>
+              <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[--color-accent]" href="insights.html#column-01">
+                記事を読む
+                <span class="button-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="content-card reveal flex flex-col overflow-hidden rounded-2xl border">
+            <div class="column-card-visual flex items-end p-6 text-[--color-white]">
+              <span class="visual-line" aria-hidden="true"></span>
+              <div class="relative z-10">
+                <p class="font-serif-jp text-4xl font-bold">02</p>
+                <p class="mt-2 text-[0.68rem] font-semibold tracking-[0.2em] text-[--color-white-70]">ADOPTION / OPERATION</p>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col p-6 md:p-7">
+              <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold tracking-wider text-[--color-accent]">OPERATION</span>
+              <time class="text-xs text-[--color-text-muted]" datetime="2026-07-04">2026.07.04</time>
+            </div>
+              <h3 class="mt-4 text-lg font-bold leading-relaxed text-[--color-primary]">生成AIが現場に定着しない5つの理由</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[--color-text-muted]">ツールの性能だけでは解決できない、ルール・教育・評価指標の設計ポイントを紹介します。</p>
+              <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[--color-accent]" href="insights.html#column-02">
+                記事を読む
+                <span class="button-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="content-card reveal flex flex-col overflow-hidden rounded-2xl border">
+            <div class="column-card-visual flex items-end p-6 text-[--color-white]">
+              <span class="visual-line" aria-hidden="true"></span>
+              <div class="relative z-10">
+                <p class="font-serif-jp text-4xl font-bold">03</p>
+                <p class="mt-2 text-[0.68rem] font-semibold tracking-[0.2em] text-[--color-white-70]">TEST / SCALE</p>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col p-6 md:p-7">
+              <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold tracking-wider text-[--color-accent]">CASE STUDY</span>
+              <time class="text-xs text-[--color-text-muted]" datetime="2026-06-20">2026.06.20</time>
+            </div>
+              <h3 class="mt-4 text-lg font-bold leading-relaxed text-[--color-primary]">小さく始めるPoCで失敗を防ぐ方法</h3>
+              <p class="mt-3 flex-1 text-sm leading-7 text-[--color-text-muted]">検証範囲と成功条件を明確にし、短期間で次の投資判断につなげる進め方をまとめました。</p>
+              <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[--color-accent]" href="insights.html#column-03">
+                記事を読む
+                <span class="button-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-stage bg-[--color-bg-alt] py-16 md:py-24">
+      <span class="section-marker" aria-hidden="true">06</span>
+      <div class="mx-auto max-w-7xl px-5 md:px-8">
+        <div class="contact-stage reveal rounded-2xl px-6 pb-20 pt-12 text-center text-[--color-white] md:px-10 md:pb-24 md:pt-16">
+          <p class="mb-4 text-xs font-semibold tracking-[0.25em] text-[--color-white-70]">CONTACT</p>
+          <h2 class="font-serif-jp text-3xl font-bold leading-tight text-[--color-white] md:text-4xl">
+            <span class="inline-block">業務の悩みを、</span><span class="inline-block">まず聞かせてください。</span>
+          </h2>
+          <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-[--color-white-75] md:text-lg">
+            具体的な計画がなくても大丈夫です。現状を伺い、取り組むべき優先順位を一緒に整理します。
+          </p>
+        </div>
+
+        <div class="stagger-group relative mx-3 -mt-10 grid gap-5 md:mx-10 md:grid-cols-2">
+          <article class="soft-card reveal rounded-2xl border p-6 text-center md:p-9">
+            <span class="mx-auto grid h-14 w-14 place-items-center rounded-xl bg-[--color-bg-alt] text-2xl text-[--color-primary]" aria-hidden="true">↗</span>
+            <h3 class="mt-5 text-xl font-bold text-[--color-primary]">無料オンライン相談</h3>
+            <p class="mt-3 text-sm leading-7 text-[--color-text-muted]">30分のヒアリングで、課題の整理と次の一歩をご提案します。</p>
+            <a class="primary-button mt-7 inline-flex min-h-[52px] w-full items-center justify-center gap-3 rounded-lg px-7 py-3.5 text-sm font-semibold sm:w-auto" href="contact.html">
+              相談を予約する
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="soft-card reveal rounded-2xl border p-6 text-center md:p-9">
+            <span class="mx-auto grid h-14 w-14 place-items-center rounded-xl bg-[--color-bg-alt] text-2xl text-[--color-primary]" aria-hidden="true">□</span>
+            <h3 class="mt-5 text-xl font-bold text-[--color-primary]">サービス資料</h3>
+            <p class="mt-3 text-sm leading-7 text-[--color-text-muted]">支援範囲や進め方をまとめた資料を、無料でご覧いただけます。</p>
+            <a class="secondary-button mt-7 inline-flex min-h-[52px] w-full items-center justify-center gap-3 rounded-lg border px-7 py-3.5 text-sm font-semibold sm:w-auto" href="contact.html#download">
+              資料をダウンロード
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[--color-footer] text-[--color-white]">
+    <div class="h-px bg-[linear-gradient(90deg,var(--color-transparent),var(--color-accent),var(--color-transparent))]" aria-hidden="true"></div>
+    <div class="mx-auto max-w-7xl px-5 pb-8 pt-14 md:px-8 md:pt-16">
+      <div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-3" aria-label="NOX合同会社 ホーム">
+            <span class="grid h-10 w-10 place-items-center rounded-lg bg-[--color-white] text-sm font-bold tracking-wider text-[--color-primary]">NX</span>
+            <span class="text-xl font-bold tracking-[0.1em]">NOX</span>
+          </a>
+          <p class="mt-5 max-w-sm text-sm leading-7 text-[--color-white-65]">
+            業務を理解し、AIを設計し、成果が続く仕組みをつくる。NOX合同会社は、企業のAI活用に伴走します。
+          </p>
+          <p class="mt-4 text-xs text-[--color-white-55]">NOX合同会社</p>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold tracking-wider text-[--color-white]">サービス</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a class="footer-link" href="services.html#design">AI業務設計</a></li>
+            <li><a class="footer-link" href="services.html#implementation">AI導入・実装支援</a></li>
+            <li><a class="footer-link" href="services.html#operation">運用・継続改善</a></li>
+            <li><a class="footer-link" href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold tracking-wider text-[--color-white]">会社情報</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a class="footer-link" href="company.html">会社概要</a></li>
+            <li><a class="footer-link" href="insights.html">事例・コラム</a></li>
+            <li><a class="footer-link" href="privacy.html">プライバシーポリシー</a></li>
+            <li><a class="footer-link" href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col gap-3 border-t border-[--color-white-10] pt-6 text-xs text-[--color-white-50] sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; 2026 NOX LLC. All rights reserved.</p>
+        <p>AI Business Design Partner</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuButton = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+      const setMenuState = (isOpen) => {
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+        mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+        mobileMenu.inert = !isOpen;
+        mobileMenu.classList.toggle("is-open", isOpen);
+      };
+
+      menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        setMenuState(!isOpen);
+      });
+
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => setMenuState(false));
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          setMenuState(false);
+        }
+      });
+
+      const revealElements = document.querySelectorAll(".reveal");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const heroVideo = document.getElementById("hero-video");
+
+      if (reducedMotion && heroVideo) {
+        heroVideo.pause();
+        heroVideo.removeAttribute("autoplay");
+      }
+
+      document.querySelectorAll(".stagger-group").forEach((group) => {
+        group.querySelectorAll(":scope > .reveal").forEach((element, index) => {
+          element.style.transitionDelay = `${index * 80}ms`;
+        });
+      });
+
+      if (reducedMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach((element) => element.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, currentObserver) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              currentObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -48px 0px"
+        }
+      );
+
+      revealElements.forEach((element) => observer.observe(element));
+    });
+  </script>
+</body>
+</html>
